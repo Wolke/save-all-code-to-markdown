@@ -1,0 +1,39 @@
+{
+  "name": "save-all-code-to-markdown",
+  "displayName": "Save All Code to Markdown",
+  "description": "save all code files to markdown",
+  "version": "0.0.1",
+  "publisher": "wolkesau",
+  "engines": {
+      "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+      "onCommand:extension.saveAllCodeFilesToMarkdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "extension.saveAllCodeFilesToMarkdown",
+              "title": "Save All Code Files to Markdown"
+          }
+      ]
+  },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts",
+      "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+      "@types/node": "^14.14.31",
+      "@types/vscode": "^1.60.0",
+      "@typescript-eslint/eslint-plugin": "^4.15.0",
+      "@typescript-eslint/parser": "^4.15.0",
+      "eslint": "^7.20.0",
+      "typescript": "^4.1.3",
+      "vscode-test": "^1.4.0"
+  }
+}
